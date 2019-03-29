@@ -13,7 +13,11 @@ For use, see the steps:
 ``ssh root@localhost/ip_docker -p <local_port>``
 
 For change root password:
+
 `` FROM kuramoto/centos-sshd:latest ``
+
 ``RUN echo root:<new_password> | chpasswd``
+
 ``EXPOSE 22``
+
 ``CMD ["/usr/sbin/sshd", "-D"]``
