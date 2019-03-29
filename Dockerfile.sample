@@ -1,0 +1,4 @@
+FROM toolstodevops/centos-sshd
+RUN echo root:<new_password> | chpasswd
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
